@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitrix.net</title>
+</head>
+<style>
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    #container{      
+        
+        display:flex;  
+        gap:100px;
+        border:1px solid orange;
+        margin-top:-8px;
+        margin-left: -8px;
+        margin-right: -90px;
+        margin-bottom: -100px;
+      
+    }
+    #left{          
+        width:40%;
+        height:auto;
+        border:1px solid red;
+       background-color: blue;
+       padding:50px;
+       
+      
+    }
+    .top{
+        display:flex;
+        justify-content:space-between;         
+    }
+    .top>a{
+         color:white;
+         
+    }
+    img+a>p:hover{
+        display:block;
+    }
+    .top+div{
+        width:70%;
+        margin-top:150px;
+    }
+    .top+div>h1{
+        font-size: 50px;
+        color:white;
+        
+    }
+    #language{
+      display: flex;
+      justify-content: end;      
+      margin-top:150px;
+    }
+    #language>select{
+        height: 50px;
+        width:100px;
+        background-color: transparent;
+        color:white;
+        border-color: white;
+        overflow-x: scroll;
+    }
+    #language>select>option{
+        color:black;
+    }
+    #right>h1{
+        font-size: 50px;        
+    }
+    #right>div{
+        padding-top: 50px;
+        
+        border-top:1px solid red;
+        padding-bottom: 50px;
+        width:70%;
+    }
+    #right>div>div{
+        border:1px solid yellow;
+        padding:20px 20px 20px 10px;
+        background-color: bisque;
+    }
+</style>
+<body>
+    <div id="container">
+        <div id="left">
+            <div class="top">
+                <img src="https://www.bitrix24.net/bitrix/templates/new/images/bitrix24-logo-en.svg">
+                <a href="#"><p>&larr; Back to site</p></a>                
+            </div>
+            <div>
+                <h1>Your company. United.</h1>
+                <h2>Free. Unlimited. Online.</h2>
+                <h2>Register today and get free forever plan and unlimited user</h2>
+            </div>
+            <div id="language">
+                <select name="language">
+                    <option value="first" selected>English</option>
+                    <option value="second">Hindi</option>
+                    <option value="third">Dutch</option>
+                    <option value="four">French</option>
+                    <option value="five">Portugues</option>
+                    <option value="six">Italian</option>
+                    <option value="seven">Turkish</option>
+                    <option value="eight">Arabian</option>
+                </select>
+            </div>
+           
+        </div>
+        <div id="right">
+            <h1>Bitrix24 Login</h1>
+            <div><div>Please log on using your login and password (or use social login) to enter www.bitrix24.in.</div></div>
+            <form>
+                <label>Enter phone number or email</label><br>
+                <input type="email">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    
+</script>
