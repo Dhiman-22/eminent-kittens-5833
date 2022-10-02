@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"></script>
 </head>
 <style>
     div>nav{
@@ -12,8 +14,18 @@
          justify-content: space-between;
          margin-top: -8px;
          margin-left: -8px;
-         margin-right: -8px;
-         border:1px solid red;
+         margin-right: -8px;      
+        
+    }
+    #nav{
+        overflow: hidden;
+        position: fixed;
+        top:0;
+        width:100%;
+        background-color: white;
+        margin-left: -8px;
+        margin-right: -8px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
     div>nav>div>img{
         width: 150px;
@@ -27,24 +39,39 @@
         font-weight: bold;
     }
     #tools+div{
-        width:15%;
+        width:20%;
         display:flex;
         justify-content: center;
         align-items: center;
         justify-content: space-between;
         margin-right: 20px;
     }
-    #tools+div>button{
+    #tools+div button{
         height:30px;
         border:0px;
         border-radius: 20px;
         background-color: #bdf300;
         font-weight: bold;
     }
+    #tools>a{
+        text-decoration: none;
+        color:black;
+    }
+    #tools>a:hover{
+        color:#32c0f6;
+    }
+    #tools+div>a{
+        text-decoration: none;
+        color:black;
+    }
+    
     #workspace{
         text-align: center;
         margin-top: 50px;
-        
+        margin-left: -8px;
+        margin-right: -8px;
+        background-color: #32c0f6;
+        padding-top: 50px;
     }
     #workspace>h1{
         font-size: 50px;;
@@ -58,7 +85,7 @@
     }
    
    .list{
-    border:1px solid red;  
+
     display: grid;
     grid-template-columns: repeat(2,400px); 
     justify-content: center;
@@ -67,11 +94,8 @@
     padding-right:100px;
 
    }
-   .ul{
-    border:1px solid green;
-   }
+
    .img{
-    border:1px solid orange;
     width:500px;
    }
    .img>img{
@@ -84,7 +108,7 @@
        align-items: flex-end;
      justify-content: center;
    }
-   .ul>button{
+   .ul button{
     
     background-color: #bdf300;
      padding:10px;
@@ -98,11 +122,11 @@
 
    #hover{
     width:230%;
-    border:1px solid blue;
+    
     display:flex;
     justify-content: space-between;
      margin-bottom:50px;   
-     border-bottom: 3px solid yellow;
+     border-bottom: 3px solid #a1e3fb;
      
    }
   #blueHead{
@@ -115,7 +139,7 @@
   }
   #pros{
     background-color: #f8f8f8 ;
-    border:1px solid yellow;
+    
     display: flex;
     display:grid;
     grid-template-columns: repeat(2,1fr);
@@ -123,10 +147,7 @@
     margin-right: -8px;
     padding:100px;
   }
-  #pros>div{
-    border:1px solid red;
-
-  }
+ 
   #pros>div>h1{
     font-size: 50px;
   }
@@ -138,7 +159,7 @@
     font-size: 20px;
     padding:10px;
   }
-  #pros>div>button{
+  #pros button{
      padding: 10px;
      
      background-color: #bdf300;
@@ -151,7 +172,7 @@
     padding-bottom: 50px;
   }
   #press>div{
-    border:1px solid red;
+
     display:flex;
   }
   #press>div>img{
@@ -162,7 +183,7 @@
     justify-content: space-evenly;
   }
   #edition{
-    border:1px solid red;
+
     background-color:#f8f8f8 ;
     margin-left:-8px;
     margin-right:-8px;
@@ -190,12 +211,12 @@
      margin-top:50px;
   }
   #register{
-    border:1px solid red;
+
     display: block;
     text-align: center;
     padding-bottom: 50px;
   }
-  #register>button{
+  #register button{
     padding: 10px;
     background-color: #bdf300;
     border-radius: 20px;
@@ -203,7 +224,7 @@
     
   }
   #footer{
-    border:1px solid red;
+    
     display:grid;
     margin-left:-8px;
   background-image: linear-gradient(to right, #34bdf5, #39aff3);
@@ -231,26 +252,31 @@
 </style>
 <body>
     <div id="container">
+        <div id="nav">
         <nav>
          <div>
             <img src="data:image/png;base64,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"></a>
          </div>
          <div id="tools">
-            <p>TOOLS</p>
-            <P>PRICING</P>
-            <P>SOLUTIONS</P>
-            <P>PARTNERS</P>
-            <P>APPS</P>
-            <P>BLOG</P>
-            <P>SUPPORT</P>
+            <a href="#">TOOLS</a>
+            <a href="#">PRICING</a>
+            <a href="#">SOLUTIONS</a>
+            <a href="#">PARTNERS</a>
+            <a href="#">APPS</a>
+            <a href="#">BLOG</a>
+            <a href="#">SUPPORT</a>
          </div>
          <div>
-            <button>START FOR FREE</button>
-            <P>LOG IN</P>
-            <P>EN</P>
+            <a href="login.html"><button>START FOR FREE</button></a>
+           
+            <a href="login.html"><i class="fa-sharp fa-solid fa-user"></i> LOG IN</a>
+            <p><i class="fa-sharp fa-solid fa-earth-americas"></i> EN</p>
          </div>
         </nav>
-
+         </div>
+         <br>
+         <br>
+         <br>
         <div id="workspace">
            <h1>Bitrix24. Your ultimate workspace.</h1>
            <div> 
@@ -280,7 +306,7 @@
                     <li>Calender</li>
                     <li>Online meeting</li>
                 </ul>
-                <button>START FOR FREE</button>
+                <a href="login.html"><button>START FOR FREE</button></a>
             </div>
             <div class="img">
                 <img src="https://www.bitrix24.in/upload/optimizer/converted/images/content_en/screens/main/header_banner/hr.png.webp?1664359518000">
@@ -309,7 +335,7 @@
                     <li><b>100% flat fee:</b> predictable costs, no per-user pricing</li>
                     
                 </ul>
-                <button>START FOR FREE</button>
+                <a href="login.html" ><button>START FOR FREE</button></a>
                 </div>
         
             <div><img src="https://www.bitrix24.in/upload/optimizer/converted/images/content_en/screens/tools/crm/features.png.webp?1663340850000"></div>
@@ -344,7 +370,7 @@
 
         <div id="register">
             <h1>Ready to try?</h1>
-            <button>REGISTER FREE</button>
+            <a href="login.html"><button>REGISTER FREE</button></a>
         </div>
 
         <div id="footer">
@@ -414,3 +440,6 @@
     
 </body>
 </html>
+<script>
+    
+</scr>
