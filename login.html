@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitrix.net</title>
+</head>
+<style>
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    #container{      
+        
+        display:flex;  
+        gap:100px;
+    
+        margin-top:-8px;
+        margin-left: -8px;
+        margin-right: -90px;
+        margin-bottom: -100px;
+      
+    }
+    #left{          
+        width:40%;
+        height:auto;    
+       background-color: blue;
+       padding:50px;
+       
+      
+    }
+    .top{
+        display:flex;
+        justify-content:space-between;         
+    }
+    .top p:hover{
+        margin-right: 10px;
+    }
+    .top>a{
+         color:white;
+         text-decoration: none;
+    }
+    img+a>p:hover{
+        display:block;
+    }
+    .top+div{
+        width:70%;
+        margin-top:150px;
+    }
+    .top+div>h1{
+        font-size: 50px;
+        color:white;
+        
+    }
+    #language{
+      display: flex;
+      justify-content: end;      
+      margin-top:150px;
+    }
+    #language>select{
+        height: 50px;
+        width:100px;
+        background-color: transparent;
+        color:white;
+        border-color: white;
+       
+    }
+    #language>select>option{
+        color:black;
+        overflow-x:scroll;
+        
+    }
+    #right>h1{
+        font-size: 50px;        
+    }
+    #right>div{
+        padding-top: 50px;
+        
+        border-top:3px solid #333;
+        padding-bottom: 50px;
+        width:70%;
+    }
+    #right>div>div{
+        
+        padding:20px 20px 20px 10px;
+        background-color: bisque;
+    }
+    #form label{
+        font-size: 20px;
+    }
+    #text{
+        width:90%;
+        height:50px;
+        border-right: 0px;
+    }
+    #text+select{
+        border-left:0px;
+        height:50px;
+    }
+    #text+div{
+        width:100%;
+        
+    }    
+    #symbols{
+    
+        margin-top:50px;
+        display: flex;
+        
+    }
+    #symbols>img{
+        height:50px;
+    }
+    #symbols>img:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    }
+    #submit{
+        height: 50px;
+        width:100px;
+        border-radius: 10px;
+        background-color: chartreuse;
+        margin-top:50px;
+    }
+</style>
+<body>
+    <div id="container">
+        <div id="left">
+            <div class="top">
+                <img src="https://www.bitrix24.net/bitrix/templates/new/images/bitrix24-logo-en.svg">
+                <a href="homePage.html"><p>&larr; Back to site</p></a>                
+            </div>
+            <div>
+                <h1>Your company. United.</h1>
+                <h2>Free. Unlimited. Online.</h2>
+                <h2>Register today and get free forever plan and unlimited user</h2>
+            </div>
+            <div id="language">
+                <select name="language">
+                    <option value="first" selected>English</option>
+                    <option value="second">Hindi</option>
+                    <option value="third">Dutch</option>
+                    <option value="four">French</option>
+                    <option value="five">Portugues</option>
+                    <option value="six">Italian</option>
+                    <option value="seven">Turkish</option>
+                    <option value="eight">Arabian</option>
+                </select>
+            </div>
+           
+        </div>
+        <div id="right">
+            <h1>Bitrix24 Login</h1>
+            <div><div>Please log on using your login and password (or use social login) to enter www.bitrix24.in.</div></div>
+            <div id="form">
+                <form>
+                    <label>Enter phone number or email</label>
+                    <br>
+                    <br>
+                    <input id="text" type="text"> 
+                    <select></select>
+                    <br> 
+                    <div id="symbols">
+                        <img src="https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png">
+                        <img src="data:image/jpeg;base64,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">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpd2OTlMqFcR15kVd2OLDf8QJh0NrS0zUT7w&usqp=CAU">
+                    </div>
+                    <br>
+                    <input id="submit" type="submit">              
+                </form>
+                <div style="text-align:center; background-color:white" ><a href="#"><h3>Need Help?</h3></a></div>
+            </div>
+           
+           
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script src="https://kit.fontawesome.com/24c494a6b6.js"
+crossorigin="anonymous"> 
+ 
+    document.querySelector("#form").addEventListener("submit", myFun)
+     let data = JSON.parse(localStorage.getItem(login))||[];
+    function myFun(event){        
+        event.preventDefault();         
+        let bag = {
+          inputValue:form.text.value
+    }
+       data.push(bag);
+       localStorage.setItem("login",JSON.stringify(data)); 
+
+    }
+   
+</script>
